@@ -6,7 +6,65 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-white font-sans">
+
+    <nav class="bg-gray-900 p-4 mt-0 w-full">
+        <div class="container mx-auto flex items-center">
+		    <div class="flex text-white font-extrabold">
+				<a class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="#"> 
+					<span class="hidden w-0 md:w-auto md:block pl-1">UNIR blog</span>
+				</a>
+            </div>
+			<div class="flex pl-4 text-sm">
+				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+				  <li class="mr-2">
+					<a class="inline-block py-2 px-2 text-white no-underline" href="index.html">Inicio</a>
+				  </li>
+				  <li class="mr-2">
+					<a class="inline-block text-indigo-200 no-underline hover:text-gray-100 hover:text-underline py-2 px-2" href="#">Sobre Mi</a>
+				  </li>
+                  <li class="mr-2">
+					<a class="inline-block text-indigo-200 no-underline hover:text-gray-100 hover:text-underline py-2 px-2" href="#">blog Proyectos</a>
+				  </li>
+                  <li class="mr-2">
+					<a class="inline-block text-indigo-200 no-underline hover:text-gray-100 hover:text-underline py-2 px-2" href="#">Experiencia</a>
+				  </li>
+				  <li class="mr-2">
+					<a class="inline-block text-indigo-200 no-underline hover:text-indigo-100 hover:text-underline py-2 px-2" href="#">blog</a>
+				  </li>
+                  <li class="mr-2">
+					<a class="inline-block text-indigo-200 no-underline hover:text-indigo-100 hover:text-underline py-2 px-2" href="#">Contacto</a>
+				  </li>
+				</ul>
+			</div>
+        </div>
+	</nav>
+    <h1>hola mundo</h1>
+    <div class="flex flex-wrap justify-between pt-12 -mx-6">
+
+        <!--1/3 col -->
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                    <img src="https://images.unsplash.com/photo-1511376777868-611b54f68947?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-64 w-full rounded-t pb-6">
+                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">un blog con tailwind!</p>
+                    <div class="w-full font-bold text-xl text-gray-900 px-6">Experiencia</div>
+                    <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                        relato sobre algunas de mis experiencias como frontend developer 
+                    </p>
+                </a>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                <div class="flex items-center justify-between">
+                    <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="https://giovanny-moreno.vercel.app/assets/gio-logo-594208a6.png" alt="Avatar of Author">
+                    <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                </div>
+            </div>
+        </div>
     
+
+
+
+    </div>
 </body>
 </html>
