@@ -12,6 +12,8 @@
         ::selection{background-color: aliceblue}
         :root{::-webkit-scrollbar{height:10px;width:10px;}::-webkit-scrollbar-track{background:#efefef;border-radius:6px}
         ::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:6px} ::-webkit-scrollbar-thumb:hover{background:#c4c4c4}}
+        /*scroll to top*/
+         .scroll-top {position: fixed;z-index: 50;padding: 0;right: 30px;bottom: 100px;opacity: 0;visibility: hidden;transform: translateY(15px);height: 46px;width: 46px;cursor: pointer;display: flex;align-items: center;justify-content: center;border-radius: 50%;transition: all .4s ease;border: none;box-shadow: inset 0 0 0 2px #ccc;color: #ccc;background-color: #fff;}.scroll-top.is-active {opacity: 1;visibility: visible;transform: translateY(0);}.scroll-top .icon-tabler-arrow-up {position: absolute;stroke-width: 2px;stroke: #333;}.scroll-top svg path {fill: none;}.scroll-top svg.progress-circle path {stroke: #333;stroke-width: 4;transition: all .4s ease;}.scroll-top:hover {color: var(--ghost-accent-color);}.scroll-top:hover .progress-circle path, .scroll-top:hover .icon-tabler-arrow-up {stroke: var(--ghost-accent-color);}
     </style>
 </head>
 <body class="bg-white font-sans">
@@ -48,69 +50,41 @@
         </div>
 	</nav>
 
-    <div class="flex flex-wrap justify-between pt-12 w-full">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl text-center text-gray-800 font-bold mt-10">Página de Contacto</h1>
 
-        <!--1/3 col -->
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <img src="https://images.unsplash.com/photo-1511376777868-611b54f68947?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-64 w-full rounded-t pb-6">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">un blog con tailwind!</p>
-                    <div class="w-full font-bold text-xl text-gray-900 px-6">Experiencia</div>
-                    <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                        relato sobre algunas de mis experiencias como frontend developer 
-                    </p>
-                </a>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                <div class="flex items-center justify-between">
-                    <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="https://giovanny-moreno.vercel.app/assets/gio-logo-594208a6.png" alt="Avatar of Author">
-                    <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <img src="https://images.unsplash.com/photo-1554497342-902a4f8da8ed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-64 w-full rounded-t pb-6">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">¿Quién soy?</p>
-                    <div class="w-full font-bold text-xl text-gray-900 px-6">Sobre mí</div>
-                    <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                        Descubre más sobre mi trayectoria personal y profesional en el mundo del desarrollo web.
-                    </p>
-                </a>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                <div class="flex items-center justify-between">
-                    <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="https://giovanny-moreno.vercel.app/assets/gio-logo-594208a6.png" alt="Avatar of Author">
-                    <p class="text-gray-600 text-xs md:text-sm">2 MIN READ</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                <a href="proyectos.html" class="flex flex-wrap no-underline hover:no-underline">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-64 w-full rounded-t pb-6">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">Mis Creaciones</p>
-                    <div class="w-full font-bold text-xl text-gray-900 px-6">Proyectos destacados</div>
-                    <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                        Un vistazo a los proyectos más innovadores en los que he trabajado, destacando mi enfoque en soluciones creativas y efectivas.
-                    </p>
-                </a>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                <div class="flex items-center justify-between">
-                    <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="https://giovanny-moreno.vercel.app/assets/gio-logo-594208a6.png" alt="Avatar of Author">
-                    <p class="text-gray-600 text-xs md:text-sm">3 MIN READ</p>
-                </div>
+        <div class="mt-8 grid grid-cols-1 gap-8">
+            <div class="max-w-md mx-auto">
+                <form action="#" method="POST" class="bg-white rounded-lg shadow-xl p-8 mb-6">
+                    <div class="mb-6">
+                        <label class="block text-gray-800 text-sm font-semibold mb-2" for="name">
+                            Nombre
+                        </label>
+                        <input class="form-input w-full px-4 py-3 rounded-lg bg-gray-200 border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-gray-700" id="name" type="text" placeholder="Tu nombre">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-800 text-sm font-semibold mb-2" for="email">
+                            Email
+                        </label>
+                        <input class="form-input w-full px-4 py-3 rounded-lg bg-gray-200 border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-gray-700" id="email" type="email" placeholder="tu@email.com">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-800 text-sm font-semibold mb-2" for="message">
+                            Mensaje
+                        </label>
+                        <textarea class="form-textarea w-full px-4 py-3 rounded-lg bg-gray-200 border border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200 text-gray-700" id="message" rows="4" placeholder="Tu mensaje aquí"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline" type="submit">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
         
-
-
     </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 p-6">
         <!-- Habilidades Técnicas -->
         <div class="bg-white rounded-lg shadow-lg p-6">
